@@ -3,7 +3,6 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Price from "../components/Price";
 import Rating from "../components/ui/Rating";
-import { books } from "../data";
 import Book from "../components/ui/Book.jsx"
 
 const BookInfo = ({ books , addToCart }) => {
