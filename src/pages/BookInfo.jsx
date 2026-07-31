@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, {useState} from "react";4
+import React, {useState} from "react";
 import { Link, useParams } from "react-router-dom";
-import Price from "../components/ui/Price";
+import Price from "../components/Price";
 import Rating from "../components/ui/Rating";
 import { books } from "../data";
+import Book from "../components/ui/Book.jsx"
 
 const BookInfo = ({ books, addToCart }) => {
     const { id } = useParams();
@@ -74,7 +75,7 @@ const BookInfo = ({ books, addToCart }) => {
                             books
                             .filter((book) => book.rating === 5 && +book.id !== +id)
                             .slice(0, 4)
-                            .map(book => <Book book={book} key={book.id} />)
+                            .map(book => <Book book={book} key={book.id}  />)
                         }   
                     </div>
                     </div>
