@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Price from "../components/Price";
 import Rating from "../components/ui/Rating";
 import { books } from "../data";
 import Book from "../components/ui/Book.jsx"
 
-const BookInfo = ({ books, addToCart }) => {
+const BookInfo = ({ books , addToCart }) => {
     const { id } = useParams();
     const book = books.find((book) => +book.id === +id);    
 
